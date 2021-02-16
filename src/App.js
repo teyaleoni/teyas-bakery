@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [shape, setShape] = useState(null);
+  const [color, setColor] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="box">
+        <div
+          className={color === "blue" ? "selected" : ""}
+          onClick={() => {
+            setColor("blue");
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Blue
+        </div>
+        <div
+          className={color === "red" ? "selected" : ""}
+          onClick={() => {
+            setColor("red");
+          }}
+        >
+          Red
+        </div>
+        <div
+          className={color === "yellow" ? "selected" : ""}
+          onClick={() => {
+            setColor("yellow");
+          }}
+        >
+          Yellow
+        </div>
+        <div
+          className={shape === "round" ? "selected" : ""}
+          onClick={() => {
+            setShape("round");
+          }}
+        >
+          Round
+        </div>
+        <div
+          className={shape === "square" ? "selected" : ""}
+          onClick={() => {
+            setShape(shape === "square" ? null : "square");
+          }}
+        >
+          Square
+        </div>
+      </div>
     </div>
   );
 }
-
 export default App;
