@@ -1,25 +1,30 @@
 import React, { useState } from "react";
 import "./App.css";
+import Box from "./box";
 
 function App() {
   const [shape, setShape] = useState(null);
   const [color, setColor] = useState(null);
+  const [showElement, setShowElement] = useState(false);
 
   return (
     <div className="App">
-      <div className="box">
-        <div
-          className={color === "blue" ? "selected" : ""}
-          onClick={() => {
-            setColor("blue");
-          }}
-        >
-          Blue
+      <div>
+        <div>
+          <div
+            className={color === "blue" ? "selected" : ""}
+            onClick={() => {
+              setShowElement(!showElement);
+            }}
+          >
+            Blue
+          </div>
+          {showElement ? <Box /> : false}
         </div>
         <div
           className={color === "red" ? "selected" : ""}
           onClick={() => {
-            setColor("red");
+            setColor(color === "red" ? null : "red");
           }}
         >
           Red
@@ -27,7 +32,7 @@ function App() {
         <div
           className={color === "yellow" ? "selected" : ""}
           onClick={() => {
-            setColor("yellow");
+            setColor(color === "yellow" ? null : "yellow");
           }}
         >
           Yellow
@@ -35,7 +40,7 @@ function App() {
         <div
           className={shape === "round" ? "selected" : ""}
           onClick={() => {
-            setShape("round");
+            setShape(shape === "round" ? null : "round");
           }}
         >
           Round
