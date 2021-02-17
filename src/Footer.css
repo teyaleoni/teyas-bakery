@@ -1,0 +1,30 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 1px 1px 11px 0px #c2c2c2;
+}
+
+.save {
+  margin-top: 0.4rem;
+}
+
+.quantity {
+  padding: 0.75rem;
+  border: 0.5px solid lightgrey;
+  background-color: transparent;
+}
+
+.add-to-cart {
+  padding: 0.8rem;
+  background-color: #ffe165;
+  border: none;
+  margin-left: 0.5rem;
+}
+
+.add-to-cart,
+.quantity,
+.total {
+  font-size: 1.3rem;
+}
