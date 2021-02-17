@@ -1,15 +1,41 @@
 import React, { useState } from "react";
-import "./App.css";
-import Box from "./box";
+import "./App.scss";
+// import Box from "./box";
 
 function App() {
-  const [shape, setShape] = useState(null);
-  const [color, setColor] = useState(null);
-  const [showElement, setShowElement] = useState(false);
+  // const [shape, setShape] = useState(null);
+  // const [color, setColor] = useState(null);
+  // const [showElement, setShowElement] = useState(false);
+
+  const categories = [
+    { title: "Shape" },
+    { title: "Size" },
+    { title: "Tiers" },
+    { title: "Sponge" },
+    { title: "Fillings" },
+    { title: "Buttercream" },
+    { title: "Decorations" },
+    { title: "Add-ons" },
+  ];
 
   return (
     <div className="App">
-      <div>
+      <div className="col-1">
+        <div className="header">
+          <h1>Customize your Cake</h1>
+        </div>
+      </div>
+      <div className="col-2">
+        <div className="accordian">
+          <ul className={"categories"}>
+            {categories.map((category) => (
+              <li className={"category"}>{category.title}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="footer"></div>
+      </div>
+      {/* <div>
         <div>
           <div
             className={color === "blue" ? "selected" : ""}
@@ -53,7 +79,7 @@ function App() {
         >
           Square
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
