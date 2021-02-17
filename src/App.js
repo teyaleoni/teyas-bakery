@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 // import Box from "./box";
 
 function App() {
@@ -22,7 +24,8 @@ function App() {
     <div className="App">
       <div className="col-1">
         <div className="header">
-          <h1>Customize your Cake</h1>
+          <FontAwesomeIcon icon={faArrowLeft} />
+          <h1>Customize Cake</h1>
         </div>
       </div>
       <div className="col-2">

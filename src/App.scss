@@ -6,21 +6,21 @@
 .col-1 {
   width: 65%;
   .header {
-    border-bottom: 1px solid green;
     height: 6%;
     display: flex;
     align-items: center;
-    padding-left: 3rem;
+    padding: 1rem 0 0 3rem;
 
     h1 {
-      margin: 0;
+      margin: 0 0 0 12px;
+      font-weight: 100;
     }
   }
 }
 
 .col-2 {
   width: 35%;
-  border-left: 1px solid black;
+  box-shadow: 0 0 10px 0 #aaaaaa;
 
   .accordian {
     height: 88%;
@@ -28,21 +28,24 @@
     .categories {
       margin: 0;
       padding: 0;
+      background-color: rgb(244, 242, 242);
 
       .category {
         width: 100%;
-        border-bottom: 1px solid orange;
+        border-bottom: 1px solid rgb(203, 200, 200);
         height: 4rem;
         list-style-type: none;
         padding: 0.5rem;
+        padding-left: 1rem;
         display: flex;
         align-items: center;
+        font-size: 1.5em;
       }
     }
   }
 
   .footer {
-    border-top: 1px solid red;
+    border-top: 1px solid lightgrey;
     height: 12%;
   }
 }
