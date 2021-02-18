@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Accordian from "./Accordian.js";
+import Accordion from "./Accordion.js";
 import Footer from "./Footer.js";
 import Header from "./Header.js";
 
@@ -11,7 +11,7 @@ function App() {
         <Header />
       </div>
       <div className="col-2">
-        <Accordian />
+        <Accordion />
         <Footer />
       </div>
     </div>

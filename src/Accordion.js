@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Accordian.css";
+import "./Accordion.css";
 
-function Accordian() {
+function Accordion() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const categories = [
@@ -17,7 +17,7 @@ function Accordian() {
   ];
 
   return (
-    <ul className={"accordian"}>
+    <ul className={"Accordion"}>
       {categories.map((category, index) => (
         <li
           className={`category ${index === activeIndex ? "active" : ""}`}
@@ -31,4 +31,4 @@ function Accordian() {
     </ul>
   );
 }
-export default Accordian;
+export default Accordion;
