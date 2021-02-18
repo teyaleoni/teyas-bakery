@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Accordian.css";
 
 function Accordian() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const categories = [
     { title: "Shape" },
     { title: "Size" },
@@ -15,13 +17,18 @@ function Accordian() {
   ];
 
   return (
-    <div className="accordian">
-      <ul className={"categories"}>
-        {categories.map((category) => (
-          <li className={"category"}>{category.title}</li>
-        ))}
-      </ul>
-    </div>
+    <ul className={"accordian"}>
+      {categories.map((category, index) => (
+        <li
+          className={`category ${index === activeIndex ? "active" : ""}`}
+          onClick={() => {
+            setActiveIndex(index);
+          }}
+        >
+          {category.title}
+        </li>
+      ))}
+    </ul>
   );
 }
 export default Accordian;
