@@ -6,8 +6,8 @@ import TiersContent from "./TiersContent";
 import FlavorContent from "./FlavorContent";
 import FillingsContent from "./FillingsContent";
 import CakeDecorationsContent from "./CakeDecorationsContent";
-
-const Dummy = () => <div>Hello</div>;
+import CakeBoardsBoxesContent from "./CakeBoardsBoxesContent";
+import PartyAddOnsContent from "./PartyAddOnsContent";
 
 function Accordion() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,8 +19,8 @@ function Accordion() {
     { title: "Flavor", Content: FlavorContent },
     { title: "Fillings", Content: FillingsContent },
     { title: "Cake Decorations", Content: CakeDecorationsContent },
-    { title: "Cake Boards/Cake Boxes", Content: Dummy },
-    { title: "Party Add-ons", Content: Dummy },
+    { title: "Cake Boards and Boxes", Content: CakeBoardsBoxesContent },
+    { title: "Party Add-ons", Content: PartyAddOnsContent },
   ];
 
   return (
