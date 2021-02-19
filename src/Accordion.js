@@ -1,42 +1,33 @@
 import React, { useState } from "react";
 import "./Accordion.css";
-
-function ShapeContent() {
-  return (
-    <div>
-      <button>Sheet</button>
-      <button>Round</button>
-      <button>Square</button>
-    </div>
-  );
-}
+import ShapeContent from "./ShapeContent";
 
 function SizeContent() {
   return (
     <div>
       <div>
         SHEET
-        <ul>
-          <li>2" MINI</li>
-          <li>9" x 13"</li>
-          <li>10" x 15"</li>
-        </ul>
+        <div>
+          <button>2" MINI</button>
+          <button>9" x 13"</button>
+          <button>10" x 15"</button>
+        </div>
       </div>
       <div>
         ROUND
-        <ul>
-          <li>2" MINI</li>
-          <li>6"</li>
-          <li>8"</li>
-          <li>10"</li>
-        </ul>
+        <div>
+          <button>2" MINI</button>
+          <button>6"</button>
+          <button>8"</button>
+          <button>10"</button>
+        </div>
       </div>
       <div>
         SQUARE
-        <ul>
-          <li>8"</li>
-          <li>9"</li>
-        </ul>
+        <div>
+          <button>8"</button>
+          <button>9"</button>
+        </div>
       </div>
     </div>
   );
@@ -45,10 +36,10 @@ function SizeContent() {
 function TiersContent() {
   return (
     <div>
-      <ul>
-        <li>YES</li>
-        <li>NO</li>
-      </ul>
+      <div>
+        <button>YES</button>
+        <button>NO</button>
+      </div>
     </div>
   );
 }
