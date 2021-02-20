@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 
 function FillingsContent() {
   const buttercreams = [
-    { title: "Vanilla" },
-    { title: "Chocolate" },
-    { title: "Cream Cheese" },
+    { title: 'Vanilla' },
+    { title: 'Chocolate' },
+    { title: 'Cream Cheese' },
   ];
   const jams = [
-    { title: "Rasberry" },
-    { title: "Strawberry" },
-    { title: "Blueberry" },
+    { title: 'Rasberry' },
+    { title: 'Strawberry' },
+    { title: 'Blueberry' },
   ];
-  const curds = [{ title: "Lemon" }];
+  const curds = [{ title: 'Lemon' }];
 
-  const fruits = [{ title: "Seasonal" }, { title: "Strawberry" }];
+  const fruits = [{ title: 'Seasonal' }, { title: 'Strawberry' }];
 
-  const ganaches = [{ title: "Chocolate" }, { title: "White" }];
+  const ganaches = [{ title: 'Chocolate' }, { title: 'White' }];
 
-  const others = [{ title: "Oreo Crumble" }];
+  const others = [{ title: 'Oreo Crumble' }];
 
   return (
     <div>

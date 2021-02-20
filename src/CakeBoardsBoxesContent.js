@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
 // Boards and Boxes will be preset picture options
 // Right now they will just be buttons
 
 function CakeBoardsBoxesContent() {
   const boards = [
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
   ];
 
-  const boxes = [{ title: "Option" }, { title: "Option" }, { title: "Option" }];
+  const boxes = [{ title: 'Option' }, { title: 'Option' }, { title: 'Option' }];
 
   return (
     <div>

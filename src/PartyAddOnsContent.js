@@ -1,48 +1,48 @@
-import React from "react";
+import React from 'react';
 
 // All options will be preset picture options
 // Right now they will just be buttons
 
 function CakeBoardsBoxesContent() {
   const flags = [
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
   ];
   const candles = [
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
   ];
 
   const cutlery = [
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
   ];
   const plates = [
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
   ];
   const napkins = [
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
   ];
   const balloons = [
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
-    { title: "Option" },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
+    { title: 'Option' },
   ];
 
-  const boxes = [{ title: "Option" }, { title: "Option" }, { title: "Option" }];
+  const boxes = [{ title: 'Option' }, { title: 'Option' }, { title: 'Option' }];
 
   return (
     <div>

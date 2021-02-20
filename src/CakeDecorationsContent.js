@@ -1,40 +1,40 @@
-import React from "react";
+import React from 'react';
 
 // Rough draft of options.
 // Keep in mind of different cake combinations and what preset options there can be
 
 function FillingsContent() {
   const baseButtercream = [
-    { title: "Vanilla" },
-    { title: "Chocolate" },
-    { title: "Cream Cheese" },
+    { title: 'Vanilla' },
+    { title: 'Chocolate' },
+    { title: 'Cream Cheese' },
   ];
 
   //   If they chose "Tiered" then there has to be another option category to choose the color of each tier
   const baseButtercreamColor = [
-    { title: "white" },
-    { title: "brown" },
-    { title: "blue" },
-    { title: "pink" },
-    { title: "red" },
+    { title: 'white' },
+    { title: 'brown' },
+    { title: 'blue' },
+    { title: 'pink' },
+    { title: 'red' },
   ];
 
   //   if they choose flowers, another category will show: flower types, flower placement, etc
   //   Or maybe this will just be preset?
-  const flowers = [{ title: "yes" }, { title: "no" }];
+  const flowers = [{ title: 'yes' }, { title: 'no' }];
 
   //   I think this will have preset options. Ex. the user will have 3 options to choose from.
-  const pipingDecorations = [{ title: "yes" }, { title: "no" }];
+  const pipingDecorations = [{ title: 'yes' }, { title: 'no' }];
 
   const seamPipings = [
-    { title: "no thanks" },
-    { title: "pipe style" },
-    { title: "pipe style" },
-    { title: "pipe style" },
+    { title: 'no thanks' },
+    { title: 'pipe style' },
+    { title: 'pipe style' },
+    { title: 'pipe style' },
   ];
 
   //   Probably preset options
-  const drips = [{ title: "Yes" }, { title: "No" }];
+  const drips = [{ title: 'Yes' }, { title: 'No' }];
 
   return (
     <div>

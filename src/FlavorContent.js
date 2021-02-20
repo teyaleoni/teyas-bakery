@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 function FlavorContent() {
   const flavors = [
-    { title: "Vanilla" },
-    { title: "Chocolate" },
-    { title: "Carrot" },
-    { title: "Banana" },
+    { title: 'Vanilla' },
+    { title: 'Chocolate' },
+    { title: 'Carrot' },
+    { title: 'Banana' },
   ];
   return (
     <div>

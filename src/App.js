@@ -1,8 +1,8 @@
-import React from "react";
-import "./App.css";
-import Accordion from "./Accordion.js";
-import Footer from "./Footer.js";
-import Header from "./Header.js";
+import React from 'react';
+import './App.css';
+import Accordion from './Accordion.js';
+import Footer from './Footer.js';
+import Header from './Header.js';
 
 function App() {
   return (
