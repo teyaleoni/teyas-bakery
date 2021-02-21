@@ -1,20 +1,23 @@
 import React from 'react';
+import { RecoilRoot } from 'recoil';
+import Accordion from './Accordion';
 import './App.css';
-import Accordion from './Accordion.js';
-import Footer from './Footer.js';
-import Header from './Header.js';
+import Footer from './Footer';
+import Header from './Header';
 
 function App() {
   return (
-    <div className="App">
-      <div className="col-1">
-        <Header />
+    <RecoilRoot>
+      <div className="App">
+        <div className="col-1">
+          <Header />
+        </div>
+        <div className="col-2">
+          <Accordion />
+          <Footer />
+        </div>
       </div>
-      <div className="col-2">
-        <Accordion />
-        <Footer />
-      </div>
-    </div>
+    </RecoilRoot>
   );
 }
 export default App;
