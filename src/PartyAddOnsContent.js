@@ -42,15 +42,13 @@ function CakeBoardsBoxesContent() {
     { title: 'Option' },
   ];
 
-  const boxes = [{ title: 'Option' }, { title: 'Option' }, { title: 'Option' }];
-
   return (
     <div>
       <div>
         Flags
         <ul>
-          {flags.map((flag, index) => (
-            <li key={index}>
+          {flags.map((flag) => (
+            <li key={flag.id}>
               <button>{flag.title}</button>
             </li>
           ))}
@@ -59,8 +57,8 @@ function CakeBoardsBoxesContent() {
       <div>
         Candles
         <ul>
-          {candles.map((candle, index) => (
-            <li key={index}>
+          {candles.map((candle) => (
+            <li key={candle.id}>
               <button>{candle.title}</button>
             </li>
           ))}
@@ -69,8 +67,8 @@ function CakeBoardsBoxesContent() {
       <div>
         Cutlery
         <ul>
-          {cutlery.map((cutleryOption, index) => (
-            <li key={index}>
+          {cutlery.map((cutleryOption) => (
+            <li key={cutleryOption.id}>
               <button>{cutleryOption.title}</button>
             </li>
           ))}
@@ -79,8 +77,8 @@ function CakeBoardsBoxesContent() {
       <div>
         Plates
         <ul>
-          {plates.map((plate, index) => (
-            <li key={index}>
+          {plates.map((plate) => (
+            <li key={plate.id}>
               <button>{plate.title}</button>
             </li>
           ))}
@@ -89,8 +87,8 @@ function CakeBoardsBoxesContent() {
       <div>
         Napkins
         <ul>
-          {napkins.map((napkin, index) => (
-            <li key={index}>
+          {napkins.map((napkin) => (
+            <li key={napkin.id}>
               <button>{napkin.title}</button>
             </li>
           ))}
@@ -99,8 +97,8 @@ function CakeBoardsBoxesContent() {
       <div>
         Balloons
         <ul>
-          {balloons.map((balloon, index) => (
-            <li key={index}>
+          {balloons.map((balloon) => (
+            <li key={balloon.id}>
               <button>{balloon.title}</button>
             </li>
           ))}

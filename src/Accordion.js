@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { atom, useRecoilState } from 'recoil';
 import './Accordion.css';
 import ShapeContent from './ShapeContent';
 import SizeContent from './SizeContent';
@@ -9,8 +10,14 @@ import CakeDecorationsContent from './CakeDecorationsContent';
 import CakeBoardsBoxesContent from './CakeBoardsBoxesContent';
 import PartyAddOnsContent from './PartyAddOnsContent';
 
+const activeState = atom({
+  key: 'active',
+  default: [],
+});
+
 function Accordion() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  // const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useRecoilState(activeState);
 
   const categories = [
     { title: 'Shape', Content: ShapeContent },

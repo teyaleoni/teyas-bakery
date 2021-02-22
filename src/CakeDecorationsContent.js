@@ -10,7 +10,8 @@ function FillingsContent() {
     { title: 'Cream Cheese' },
   ];
 
-  //   If they chose "Tiered" then there has to be another option category to choose the color of each tier
+  // If they chose "Tiered" then there has to be another option category to choose the color of
+  // each tier
   const baseButtercreamColor = [
     { title: 'white' },
     { title: 'brown' },
@@ -41,9 +42,9 @@ function FillingsContent() {
       <div>
         Base Buttercream Flavor
         <ul>
-          {baseButtercream.map((baseButtercream, index) => (
+          {baseButtercream.map((baseButterCream, index) => (
             <li key={index}>
-              <button>{baseButtercream.title}</button>
+              <button>{baseButterCream.title}</button>
             </li>
           ))}
         </ul>
