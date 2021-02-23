@@ -12,7 +12,7 @@ import PartyAddOnsContent from './PartyAddOnsContent';
 
 const activeState = atom({
   key: 'active',
-  default: [],
+  default: 0,
 });
 
 function Accordion() {
