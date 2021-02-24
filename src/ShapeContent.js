@@ -1,11 +1,22 @@
 import React from 'react';
+import { useRecoilState } from 'recoil';
+import * as atoms from './atoms';
 
+const SHAPE_OPTIONS = ['Sheet', 'Round', 'Square'];
 function ShapeContent() {
+  const [shape, setShape] = useRecoilState(atoms.shape);
+
   return (
     <div>
-      <button>Sheet</button>
-      <button>Round</button>
-      <button>Square</button>
+      {SHAPE_OPTIONS.map((option) => (
+        <button
+          className={shape === option ? 'selected' : ''}
+          style={{ background: shape === option ? 'green' : '' }}
+          onClick={() => setShape(option)}
+        >
+          {option}
+        </button>
+      ))}
     </div>
   );
 }

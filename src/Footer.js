@@ -2,6 +2,8 @@ import React from 'react';
 import './Footer.css';
 
 function Footer() {
+  // add to cart function
+
   return (
     <div className="footer">
       <div className="amount">

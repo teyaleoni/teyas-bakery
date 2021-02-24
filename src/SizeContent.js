@@ -1,33 +1,30 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import * as atoms from './atoms';
+
+const SIZE_OPTIONS_MAP = {
+  Sheet: ['2" MINI', '9" x 13"', '10" x 15"'],
+  Round: ['2" MINI', '6"', '8"', '10"'],
+  Square: ['8"', '9"'],
+};
 
 function SizeContent() {
+  const shape = useRecoilValue(atoms.shape);
+  const sizeOptionsForShape = SIZE_OPTIONS_MAP[shape] ?? [];
+  const [size, setSize] = useRecoilState(atoms.size);
+
   return (
     <div>
-      <div>
-        SHEET
-        <div>
-          <button>2" MINI</button>
-          <button>9" x 13"</button>
-          <button>10" x 15"</button>
-        </div>
-      </div>
-      <div>
-        ROUND
-        <div>
-          <button>2" MINI</button>
-          <button>6"</button>
-          <button>8"</button>
-          <button>10"</button>
-        </div>
-      </div>
-      <div>
-        SQUARE
-        <div>
-          <button>8"</button>
-          <button>9"</button>
-        </div>
-      </div>
+      {sizeOptionsForShape.map((option) => (
+        <button
+          className={size === option ? 'selected' : ''}
+          style={{ background: size === option ? 'green' : '' }}
+          onClick={() => setSize(option)}
+        >
+          {option}
+        </button>
+      ))}
     </div>
   );
 }
