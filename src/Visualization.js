@@ -8,6 +8,8 @@ export default function Visualization() {
   const size = useRecoilValue(atoms.size);
   const tier = useRecoilValue(atoms.tier);
   const flavor = useRecoilValue(atoms.flavor);
+  const topFlavor = useRecoilValue(atoms.topFlavor);
+  const baseFlavor = useRecoilValue(atoms.baseFlavor);
 
   return (
     <div className="Visualization">
@@ -18,7 +20,14 @@ export default function Visualization() {
       <h2>Tiers</h2>
       {tier}
       <h2>Flavor</h2>
+      {/* if user chooses "Tier: Yes" then title should change to "Flavors" instead of "Flavor" */}
       {flavor}
+      <ul>
+        <h1>Top Tier</h1>
+        <li>{topFlavor}</li>
+        <h1>Base Tier</h1>
+        <li>{baseFlavor}</li>
+      </ul>
     </div>
   );
 }

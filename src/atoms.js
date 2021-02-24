@@ -28,3 +28,13 @@ export const flavor = atom({
   key: 'flavor',
   default: null,
 });
+
+export const topFlavor = atom({
+  key: 'topFlavor',
+  default: null,
+});
+
+export const baseFlavor = atom({
+  key: 'baseFlavor',
+  default: null,
+});
