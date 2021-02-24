@@ -19,3 +19,12 @@ export const size = atom({
   key: 'size',
   default: null,
 });
+
+export const tier = atom({
+  key: 'tier',
+  default: null,
+});
+export const flavor = atom({
+  key: 'flavor',
+  default: null,
+});

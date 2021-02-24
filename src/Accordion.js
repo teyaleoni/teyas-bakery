@@ -12,7 +12,6 @@ import SizeContent from './SizeContent';
 import TiersContent from './TiersContent';
 
 function Accordion() {
-  // const [activeIndex, setActiveIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useRecoilState(atoms.activeIndex);
 
   const categories = [
