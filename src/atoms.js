@@ -22,8 +22,9 @@ export const size = atom({
 
 export const tier = atom({
   key: 'tier',
-  default: null,
+  default: 'NO',
 });
+
 export const flavor = atom({
   key: 'flavor',
   default: null,
@@ -36,5 +37,34 @@ export const topFlavor = atom({
 
 export const baseFlavor = atom({
   key: 'baseFlavor',
+  default: null,
+});
+
+export const filling = atom({
+  key: 'filling',
+  default: null,
+});
+export const Buttercream = atom({
+  key: 'Buttercream',
+  default: null,
+});
+export const Jam = atom({
+  key: 'Jam',
+  default: null,
+});
+export const Curd = atom({
+  key: 'Curd',
+  default: null,
+});
+export const Fruit = atom({
+  key: 'Fruit',
+  default: null,
+});
+export const Ganache = atom({
+  key: 'Ganache',
+  default: null,
+});
+export const Other = atom({
+  key: 'Other',
   default: null,
 });
