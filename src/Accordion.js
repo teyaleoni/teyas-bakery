@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import './Accordion.css';
 import * as atoms from './atoms';
 import CakeBoardsBoxesContent from './CakeBoardsBoxesContent';
@@ -13,12 +13,13 @@ import TiersContent from './TiersContent';
 
 function Accordion() {
   const [activeIndex, setActiveIndex] = useRecoilState(atoms.activeIndex);
+  const tier = useRecoilValue(atoms.tier);
 
   const categories = [
     { title: 'Shape', Content: ShapeContent },
     { title: 'Size', Content: SizeContent },
     { title: 'Tiers', Content: TiersContent },
-    { title: 'Flavor', Content: FlavorContent },
+    { title: `Flavor${tier === 'YES' ? 's' : ''}`, Content: FlavorContent },
     { title: 'Fillings', Content: FillingsContent },
     { title: 'Cake Decorations', Content: CakeDecorationsContent },
     { title: 'Cake Boards and Boxes', Content: CakeBoardsBoxesContent },

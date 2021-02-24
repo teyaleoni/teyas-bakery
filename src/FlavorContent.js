@@ -7,9 +7,16 @@ import * as atoms from './atoms';
 // each layer will have it's own set of falvor options
 // if the user chooses Tiers: No
 // only one option of flavors should show
+
+// const FLAVOR_OPTIONS_MAP = {
+//   Yes: {
+//     topTier: ['Vanilla', 'Chocolate', 'Carrot', 'Banana'],
+//     bottomTier: ['Vanilla', 'Chocolate', 'Carrot', 'Banana'],
+//   },
+//   No: ['Vanilla', 'Chocolate', 'Carrot', 'Banana'],
+// };
+
 const FLAVOR_OPTIONS = ['Vanilla', 'Chocolate', 'Carrot', 'Banana'];
-const TOP_TIER_FLAVOR_OPTIONS = ['Vanilla', 'Chocolate', 'Carrot', 'Banana'];
-const BASE_TIER_FLAVOR_OPTIONS = ['Vanilla', 'Chocolate', 'Carrot', 'Banana'];
 
 function FlavorContent() {
   // const tier = useRecoilValue(atoms.tier);
@@ -31,7 +38,7 @@ function FlavorContent() {
       <div className="tiers">
         <div>
           <h3>Top Tier</h3>
-          {TOP_TIER_FLAVOR_OPTIONS.map((option) => (
+          {FLAVOR_OPTIONS.map((option) => (
             <button
               className={topTierflavor === option ? 'selected' : ''}
               style={{ background: topTierflavor === option ? 'green' : '' }}
@@ -43,7 +50,7 @@ function FlavorContent() {
         </div>
         <div>
           <h3>Base Tier</h3>
-          {BASE_TIER_FLAVOR_OPTIONS.map((option) => (
+          {FLAVOR_OPTIONS.map((option) => (
             <button
               className={baseTierflavor === option ? 'selected' : ''}
               style={{ background: baseTierflavor === option ? 'green' : '' }}

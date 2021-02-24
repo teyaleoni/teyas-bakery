@@ -19,15 +19,17 @@ export default function Visualization() {
       {size}
       <h2>Tiers</h2>
       {tier}
-      <h2>Flavor</h2>
+      <h2>Flavor{tier === 'YES' && 's'}</h2>
       {/* if user chooses "Tier: Yes" then title should change to "Flavors" instead of "Flavor" */}
       {flavor}
-      <ul>
-        <h1>Top Tier</h1>
-        <li>{topFlavor}</li>
-        <h1>Base Tier</h1>
-        <li>{baseFlavor}</li>
-      </ul>
+      {tier === 'YES' && (
+        <ul>
+          <h1>Top Tier</h1>
+          <li>{topFlavor}</li>
+          <h1>Base Tier</h1>
+          <li>{baseFlavor}</li>
+        </ul>
+      )}
     </div>
   );
 }
