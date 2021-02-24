@@ -10,7 +10,8 @@ export default function Visualization() {
   const flavor = useRecoilValue(atoms.flavor);
   const topFlavor = useRecoilValue(atoms.topFlavor);
   const baseFlavor = useRecoilValue(atoms.baseFlavor);
-
+  const filling = useRecoilValue(atoms.filling);
+  const [fillingType, fillingFlavor] = (filling ?? '').split(':');
   return (
     <div className="Visualization">
       <h2>Shape</h2>
@@ -29,6 +30,9 @@ export default function Visualization() {
           <li>{baseFlavor}</li>
         </ul>
       )}
+      <h2>Filling{tier === 'YES' && 's'}</h2>
+      <h3> {fillingType}</h3>
+      {fillingFlavor}
     </div>
   );
 }

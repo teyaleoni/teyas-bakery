@@ -16,7 +16,6 @@ function FlavorContent() {
           {FLAVOR_OPTIONS.map((option) => (
             <button
               className={flavor === option ? 'selected' : ''}
-              style={{ background: flavor === option ? 'green' : '' }}
               onClick={() => setFlavor(option)}
             >
               {option}
@@ -31,7 +30,6 @@ function FlavorContent() {
             {FLAVOR_OPTIONS.map((option) => (
               <button
                 className={topTierflavor === option ? 'selected' : ''}
-                style={{ background: topTierflavor === option ? 'green' : '' }}
                 onClick={() => setTopFlavor(option)}
               >
                 {option}
@@ -43,7 +41,6 @@ function FlavorContent() {
             {FLAVOR_OPTIONS.map((option) => (
               <button
                 className={baseTierflavor === option ? 'selected' : ''}
-                style={{ background: baseTierflavor === option ? 'green' : '' }}
                 onClick={() => setBottomFlavor(option)}
               >
                 {option}

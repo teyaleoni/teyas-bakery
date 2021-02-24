@@ -1,86 +1,41 @@
 import React from 'react';
+import { useRecoilState } from 'recoil';
+import * as atoms from './atoms';
+
+const FILLING_GROUPS = [
+  ['Buttercream', ['Vanilla', 'Chocolate', 'Cream Cheese']],
+  ['Jam', ['Rasberry', 'Strawberry', 'Blueberry']],
+  ['Curd', ['Lemon']],
+  ['Fruit', ['Seasonal', 'Strawberry']],
+  ['Ganache', ['Chocolate', 'White']],
+  ['Other', ['Oreo Crumble']],
+];
 
 function FillingsContent() {
-  const buttercreams = [
-    { title: 'Vanilla' },
-    { title: 'Chocolate' },
-    { title: 'Cream Cheese' },
-  ];
-  const jams = [
-    { title: 'Rasberry' },
-    { title: 'Strawberry' },
-    { title: 'Blueberry' },
-  ];
-  const curds = [{ title: 'Lemon' }];
-
-  const fruits = [{ title: 'Seasonal' }, { title: 'Strawberry' }];
-
-  const ganaches = [{ title: 'Chocolate' }, { title: 'White' }];
-
-  const others = [{ title: 'Oreo Crumble' }];
+  const [filling, setFilling] = useRecoilState(atoms.filling);
 
   return (
     <div>
-      <div>
-        Buttercream
-        <ul>
-          {buttercreams.map((buttercream, index) => (
-            <li key={index}>
-              <button>{buttercream.title}</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        Jam
-        <ul>
-          {jams.map((jam, index) => (
-            <li key={index}>
-              <button>{jam.title}</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        Curd
-        <ul>
-          {curds.map((curd, index) => (
-            <li key={index}>
-              <button>{curd.title}</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        Fruit
-        <ul>
-          {fruits.map((fruit, index) => (
-            <li key={index}>
-              <button>{fruit.title}</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        Ganache
-        <ul>
-          {ganaches.map((ganache, index) => (
-            <li key={index}>
-              <button>{ganache.title}</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        Others
-        <ul>
-          {others.map((other, index) => (
-            <li key={index}>
-              <button>{other.title}</button>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {FILLING_GROUPS.map(([groupName, flavors]) => (
+        <div key={groupName}>
+          {groupName}
+          <ul>
+            {flavors.map((flavor) => {
+              const option = `${groupName}:${flavor}`;
+              return (
+                <li key={flavor}>
+                  <button
+                    className={filling === option ? 'selected' : ''}
+                    onClick={() => setFilling(option)}
+                  >
+                    {flavor}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 }

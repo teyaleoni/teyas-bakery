@@ -10,7 +10,6 @@ function TiersContent() {
       {TIER_OPTIONS.map((option) => (
         <button
           className={tier === option ? 'selected' : ''}
-          style={{ background: tier === option ? 'green' : '' }}
           onClick={() => setTiers(option)}
         >
           {option}

@@ -19,7 +19,6 @@ function SizeContent() {
       {sizeOptionsForShape.map((option) => (
         <button
           className={size === option ? 'selected' : ''}
-          style={{ background: size === option ? 'green' : '' }}
           onClick={() => setSize(option)}
         >
           {option}

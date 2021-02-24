@@ -11,7 +11,6 @@ function ShapeContent() {
       {SHAPE_OPTIONS.map((option) => (
         <button
           className={shape === option ? 'selected' : ''}
-          style={{ background: shape === option ? 'green' : '' }}
           onClick={() => setShape(option)}
         >
           {option}
