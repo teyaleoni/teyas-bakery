@@ -20,7 +20,6 @@ export default function Visualization() {
       <h2>Tiers</h2>
       {tier}
       <h2>Flavor{tier === 'YES' && 's'}</h2>
-      {/* if user chooses "Tier: Yes" then title should change to "Flavors" instead of "Flavor" */}
       {flavor}
       {tier === 'YES' && (
         <ul>
