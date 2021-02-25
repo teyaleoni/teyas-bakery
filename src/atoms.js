@@ -44,3 +44,13 @@ export const filling = atom({
   key: 'filling',
   default: null,
 });
+
+export const topTierFilling = atom({
+  key: 'topTierFilling',
+  default: null,
+});
+
+export const baseTierFilling = atom({
+  key: 'baseTierFilling',
+  default: null,
+});

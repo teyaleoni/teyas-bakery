@@ -20,7 +20,7 @@ function Accordion() {
     { title: 'Size', Content: SizeContent },
     { title: 'Tiers', Content: TiersContent },
     { title: `Flavor${tier === 'YES' ? 's' : ''}`, Content: FlavorContent },
-    { title: 'Filling', Content: FillingsContent },
+    { title: `Filling${tier === 'YES' ? 's' : ''}`, Content: FillingsContent },
     { title: 'Cake Decorations', Content: CakeDecorationsContent },
     { title: 'Cake Boards and Boxes', Content: CakeBoardsBoxesContent },
     { title: 'Party Add-ons', Content: PartyAddOnsContent },
